@@ -1,0 +1,27 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.outline {
+  padding: 10px;
+  border: thin black 1px;
+}
+
+.muted {
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+}

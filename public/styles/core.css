@@ -1,0 +1,23 @@
+body {
+  font-family: Roboto;
+}
+
+.centre {
+  text-align: center;
+}
+
+.link {
+  font-family: Roboto;
+  font-size: large;
+  font-weight: 700;
+  color: black;
+}
+
+.input-form {
+  padding: 15px;
+  /* box-shadow: 2px, 2px, 8px rgba(0, 0, 0, 0.3); */
+}
+
+.table-col {
+  width: 150px;
+}
