@@ -1,8 +1,10 @@
+const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const userFind = require("./users");
 const AppError = require("../exceptions/App.Error");
+const update = require("../utilities/template");
 
 //get login form
 const loginForm = function (req, res) {
@@ -87,7 +89,20 @@ const logout = (req, res) => {
 };
 
 const profile = (req, res) => {
-  return res.sendFile(path.join(__dirname, "./login_profile.html"));
+  const kvp = [
+    ["#name#", "Ryan Reynolds"],
+    ["#email#", "email"],
+    ["#phone#", "phone"],
+    ["#role#", "power user"],
+    ["#note#", "best customer"],
+  ];
+
+  let file = fs.readFileSync(
+    path.join(__dirname, "./login_profile.html"),
+    "utf-8"
+  );
+
+  return res.send(update.pop(kvp, file));
 };
 
 exports.loginForm = loginForm;
